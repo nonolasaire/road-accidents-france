@@ -7,7 +7,8 @@ A Streamlit data story on French road accidents, 2019–2024, built for **local 
 
 Choose a département in the sidebar and the whole story updates, with the national value as a grey reference.
 
-**Live app:** _URL to add after deployment on Streamlit Community Cloud_ ·
+**Live app:** https://road-accidents-france-nbd3t5u5apzvc3mhyudrhd.streamlit.app/ ·
+**Code:** https://github.com/nonolasaire/road-accidents-france ·
 **Author:** Noam Slézack, EFREI Paris, Data & AI major — #EFREIDataStories2026
 
 ---
