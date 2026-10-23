@@ -1,0 +1,10 @@
+# App
+streamlit==1.66.0
+pandas==3.0.6
+numpy==2.5.4
+pyarrow==26.0.0     # Parquet engine for pandas
+plotly==7.1.0
+
+# Data scripts (scripts/download_data.py, scripts/build_data.py)
+requests==2.34.2
+openpyxl==3.1.5     # reads the INSEE population .xlsx

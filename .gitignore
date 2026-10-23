@@ -1,0 +1,8 @@
+.venv/
+data/raw/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+# Local tooling (preview server config, personal settings); the visual charter in .claude/skills/ is kept
+.claude/launch.json
+.claude/settings.local.json
