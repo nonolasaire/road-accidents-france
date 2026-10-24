@@ -8,7 +8,7 @@ A Streamlit data story on French road accidents, 2019–2024, built for **local 
 Choose a département in the sidebar and the whole story updates, with the national value as a grey reference.
 
 **Live app:** https://road-accidents-france-nbd3t5u5apzvc3mhyudrhd.streamlit.app/ ·
-**Code:** https://github.com/nonolasaire/road-accidents-france ·
+
 **Author:** Noam Slézack, EFREI Paris, Data & AI major — #EFREIDataStories2026
 
 ---
@@ -41,11 +41,11 @@ for every year (3,244 / 2,541 / 2,944 / 3,267 / 3,167 / 3,193); `scripts/build_d
 
 ## Run it locally
 
-Requires Python 3.13 (other recent versions should work). From the project folder:
+From the project folder:
 
 ```bash
 python -m venv .venv
-.venv/Scripts/activate          # Windows; on macOS/Linux: source .venv/bin/activate
+.venv/Scripts/activate         
 pip install -r requirements.txt
 streamlit run app.py
 ```
@@ -109,18 +109,6 @@ tests/smoke_test.py     headless AppTest of the app
 
 Every decision is documented in the notebooks and in the app's *Data quality & methodology* section.
 
-## How the app meets the brief
-
-| Requirement | Where |
-|---|---|
-| Narrative for a defined audience, central question, insights → implications | `docs/storyboard.md`; one scrolling page: hook → where → who → when → trend → what to do → data quality; each headline is the insight, computed for the selected territory |
-| Streamlit ≥ 1.33, sidebar filters (date range, region, variable selection) | Streamlit 1.66; sidebar: territory (France or one département), year range, road users |
-| ≥ 3 interactive Plotly visuals with tooltips, at least one map | 2 maps (choropleth, fatal accidents), paired bars ×2, heatmaps ×2, line charts ×2, all with tooltips |
-| KPI header reacting to filters | 4 `st.metric` cards (killed, lethality, departmental roads, aged 65+) with change vs previous year or gap vs France |
-| Data quality section | Missing values chart, duplicates and orphans per table and year, ONISR validation, cleaning decisions |
-| Caching, pre-aggregation, efficient merges | `st.cache_data` on loading and on every aggregation; small pre-built Parquet files; joins asserted 1:1 |
-| Accessibility | Axis titles with units, values written in heatmap cells, alt text under every chart, contrast-checked dark palette, "See the data" tables |
-| Reproducibility | Pinned `requirements.txt`, download script with caching, build script with assertions, no raw data in the repo, smoke test |
 
 ## Limitations
 
