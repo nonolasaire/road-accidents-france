@@ -6,3 +6,5 @@ __pycache__/
 # Local tooling (preview server config, personal settings); the visual charter in .claude/skills/ is kept
 .claude/launch.json
 .claude/settings.local.json
+# Deliverable zip, built from the repository with git archive (not part of the repository itself)
+StApp26_*.zip
